@@ -2,30 +2,44 @@
     <div class="container px-4 text-center">
             <div class="grid text-center">
                 <div class="g-col-6">
-                    <h1>Choose your next adventure</h1>
+                    <h1>Choose your character</h1>
                 </div>
                 <div class="g-col-6">
-                    <button type="button" class="btn btn-warning">Random Book</button>
+                    <button type="button" class="btn btn-warning">Random Character</button>
                 </div>
             </div>
+            <br />
         <div class="row">
             <div class="col">
                 <div class="p-3 border bg-light">
-                    <h1 class="display-4">Book Title</h1>
-                    <p class="lead">Author</p>
+                    <h1 class="display-4"><%= @empty_result %></h1>
+                    <img src=<%= @results['results'][0]['image']%> class="img-thumbnail" alt="...">
+                    <p class="lead">Status: <%= @results['results'][0]['status'] %>
+                    </p>
                     <hr class="my-4"/>
-                    <p>casa editrice</p>
-                    <p>qanno di pubblicazione</p>
                         <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        More info
+                                       Info
                                     </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                        <p> <%= @results['results'][0]['gender'] %></p>
+                                        <p>Species: <%= @results['results'][0]['species'] %></p>
+                                        <p> Type: <%= @no_type %> </p>
+                                        <p> <%= @results['results'][0]['origin']['name'] %> </p>
+                                        <p> <%= @results['results'][0]['location']['name'] %> </p>
+                                        <h4> Episods </h4>
+                                        <div>
+                                            <ol>
+                                                <li> <%= @results['results'][0]['episode'][0] %> </li>
+                                                <li> <%= @results['results'][0]['episode'][1] %> </li>
+                                                <li> <%= @results['results'][0]['episode'][2] %> </li>
+                                                <li> <%= @results['results'][0]['episode'][3] %> </li>
+                                            </ol>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
