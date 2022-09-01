@@ -22,5 +22,7 @@ class MainController < ApplicationController
         else
             @no_type = @results['results'][0]['type']
         end
+
+
     end
 end

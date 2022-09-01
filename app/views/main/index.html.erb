@@ -1,11 +1,9 @@
 <div class="d-flex align-items-center justify-content-center">
     <div class="container px-4 text-center">
+    <br />
             <div class="grid text-center">
                 <div class="g-col-6">
-                    <h1>Choose your character</h1>
-                </div>
-                <div class="g-col-6">
-                    <button type="button" class="btn btn-warning">Random Character</button>
+                    <h1>Who's your favourite?</h1>
                 </div>
             </div>
             <br />
@@ -31,15 +29,6 @@
                                         <p> Type: <%= @no_type %> </p>
                                         <p> <%= @results['results'][0]['origin']['name'] %> </p>
                                         <p> <%= @results['results'][0]['location']['name'] %> </p>
-                                        <h4> Episods </h4>
-                                        <div>
-                                            <ol>
-                                                <li> <%= @results['results'][0]['episode'][0] %> </li>
-                                                <li> <%= @results['results'][0]['episode'][1] %> </li>
-                                                <li> <%= @results['results'][0]['episode'][2] %> </li>
-                                                <li> <%= @results['results'][0]['episode'][3] %> </li>
-                                            </ol>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
