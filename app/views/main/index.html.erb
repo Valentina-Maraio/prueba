@@ -36,10 +36,93 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col">
+                <div class="p-3 border bg-light">
+                    <h1 class="display-4"><%= @empty_result %></h1>
+                    <img src=<%= @results['results'][1]['image']%> class="img-thumbnail" alt="...">
+                    <p class="lead">Status: <%= @results['results'][1]['status'] %>
+                    </p>
+                    <hr class="my-4"/>
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                       Info
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p> <%= @results['results'][1]['gender'] %></p>
+                                        <p>Species: <%= @results['results'][1]['species'] %></p>
+                                        <p> Type: <%= @no_type %> </p>
+                                        <p> <%= @results['results'][1]['origin']['name'] %> </p>
+                                        <p> <%= @results['results'][1]['location']['name'] %> </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+                <div class="row">
+            <div class="col">
+                <div class="p-3 border bg-light">
+                    <h1 class="display-4"><%= @empty_result %></h1>
+                    <img src=<%= @results['results'][2]['image']%> class="img-thumbnail" alt="...">
+                    <p class="lead">Status: <%= @results['results'][2]['status'] %>
+                    </p>
+                    <hr class="my-4"/>
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                       Info
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p> <%= @results['results'][2]['gender'] %></p>
+                                        <p>Species: <%= @results['results'][2]['species'] %></p>
+                                        <p> Type: <%= @no_type %> </p>
+                                        <p> <%= @results['results'][2]['origin']['name'] %> </p>
+                                        <p> <%= @results['results'][2]['location']['name'] %> </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="p-3 border bg-light">
+                    <h1 class="display-4"><%= @empty_result %></h1>
+                    <img src=<%= @results['results'][3]['image']%> class="img-thumbnail" alt="...">
+                    <p class="lead">Status: <%= @results['results'][3]['status'] %>
+                    </p>
+                    <hr class="my-4"/>
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                       Info
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p> <%= @results['results'][3]['gender'] %></p>
+                                        <p>Species: <%= @results['results'][3]['species'] %></p>
+                                        <p> Type: <%= @no_type %> </p>
+                                        <p> <%= @results['results'][3]['origin']['name'] %> </p>
+                                        <p> <%= @results['results'][3]['location']['name'] %> </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<h2>prova loop</h2>
-<%= @results.each do |result| %>
-<li> <%= result %> </li>
-<% end %>

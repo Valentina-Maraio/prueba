@@ -7,6 +7,8 @@ class MainController < ApplicationController
         @response = Net::HTTP.get(@uri)
         @results = JSON.parse(@response)
 
+
+
         #error
         if @results.empty?
             @empty_result = "Choose another character"
